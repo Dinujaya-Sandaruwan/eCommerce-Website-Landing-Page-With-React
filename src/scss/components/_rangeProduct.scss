@@ -1,0 +1,40 @@
+.scrollBtn-left,
+.scrollBtn-right {
+  background: transparent;
+  border: none;
+  margin-right: -65px;
+  z-index: 100;
+  color: var(--gray);
+}
+
+.scrollBtn-left {
+  margin-right: -65px;
+}
+.scrollBtn-right {
+  margin-left: -65px;
+}
+
+.range-card {
+  margin: 0px 10px 0px 10px;
+
+  h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: $semiBold;
+    color: var(--light-black);
+
+    @media (max-width: 1205px) {
+      font-size: rem(20);
+    }
+  }
+}
+
+/* chrome and chromium based */
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.react-horizontal-scrolling-menu--scroll-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

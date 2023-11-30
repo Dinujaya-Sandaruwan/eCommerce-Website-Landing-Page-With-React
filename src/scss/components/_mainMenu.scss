@@ -1,0 +1,26 @@
+.main-menu {
+  display: flex;
+  gap: 50px;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: $medium;
+  font-size: rem(18);
+
+  @media (max-width: 700px) {
+    .desktop-menu-item {
+      display: none;
+    }
+  }
+
+  .mobile-menu-icon {
+    @media (min-width: 700px) {
+      display: none;
+    }
+  }
+
+  .desktop-menu-item:hover {
+    cursor: pointer;
+  }
+
+  //   outline: 2px solid red;
+}

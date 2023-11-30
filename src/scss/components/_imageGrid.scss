@@ -1,0 +1,92 @@
+.imageGrid {
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-areas:
+    "leftTop middle rightTop"
+    "leftBottom middle rightBottom";
+
+  .grid01 {
+    // background-color: lightblue;
+    grid-area: leftTop;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 1vw;
+    padding: 1vw;
+    padding-left: 0;
+
+    .img01 {
+      width: 17vw;
+    }
+    .img02 {
+      width: 26vw;
+    }
+  }
+  .grid02 {
+    // background-color: lightcoral;
+    grid-area: leftBottom;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 1vw;
+    padding-right: 1vw;
+
+    .img03 {
+      width: 26vw;
+    }
+    .img04 {
+      width: 21vw;
+    }
+  }
+  .grid03 {
+    // background-color: lightcyan;
+    grid-area: middle;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .img05 {
+      width: 20vw;
+    }
+  }
+  .grid04 {
+    // background-color: lightgreen;
+    grid-area: rightTop;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 1vw;
+    padding: 1vw;
+    padding-right: 0;
+
+    .img06 {
+      width: 15.5vw;
+    }
+    .img07 {
+      width: 23vw;
+    }
+  }
+  .grid05 {
+    // background-color: lightpink;
+    grid-area: rightBottom;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1vw;
+    padding-left: 1vw;
+
+    .img08 {
+      width: 14vw;
+    }
+    .img09 {
+      width: 19vw;
+    }
+  }
+}

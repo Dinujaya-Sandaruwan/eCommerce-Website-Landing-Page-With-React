@@ -1,0 +1,211 @@
+.inspiration-content {
+  max-width: 1920px;
+  height: 700px;
+  font-size: rem(18);
+  padding: 35px;
+
+  display: flex;
+
+  .ins-items:nth-child(1) {
+    width: 47%;
+    height: 100%;
+  }
+
+  .ins-items:nth-child(2) {
+    width: 25%;
+    min-width: 350px;
+    height: 100%;
+  }
+
+  .ins-items:nth-child(3) {
+    width: 28%;
+    height: 100%;
+  }
+
+  .inspiration-titles {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding-left: 10em;
+    padding-right: 5em;
+
+    h2 {
+      font-weight: $bold;
+      font-size: 2.5em;
+      line-height: 1.1;
+      color: var(--black-title);
+    }
+
+    p {
+      color: var(--gray);
+      margin-top: 1.2em;
+      font-weight: $medium;
+      font-size: 1em;
+    }
+
+    button {
+      width: 15em;
+      height: 3em;
+      font-size: 1em;
+      margin-top: 1.1em;
+      background-color: var(--dark-cream);
+      color: var(--white);
+      font-weight: $semiBold;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .inspiration-middle {
+    background-image: url("../assets/Rectangle\ 24.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    .content {
+      width: 200px;
+      height: 100px;
+      background-color: rgba($color: #ffffff, $alpha: 0.8);
+
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+
+      padding-left: 30px;
+
+      p {
+        color: var(--gray);
+        font-size: 0.8em;
+      }
+      h2 {
+        color: var(--light-black);
+        font-size: 1.3em;
+      }
+    }
+
+    .content::after {
+      content: "→";
+      width: 50px;
+      height: 50px;
+      color: var(--white);
+      background-color: var(--dark-cream);
+      font-size: 1.3em;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      bottom: 0px;
+      right: -50px;
+    }
+  }
+
+  .inspiration-slider {
+    display: flex;
+    position: relative;
+
+    .rightBtn {
+      position: absolute;
+      aspect-ratio: 1/1;
+      width: 54px;
+      border-radius: 50%;
+      background-color: var(--white);
+      border: none;
+      color: var(--dark-cream);
+      font-size: rem(20);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      top: calc(50% - 27px);
+      right: 40px;
+
+      cursor: pointer;
+      transition-duration: 200ms;
+    }
+
+    .rightBtn:hover {
+      background-color: var(--dark-white);
+      transform: scale(1.05);
+    }
+
+    img {
+      padding-left: 25px;
+      height: 80%;
+    }
+
+    .buttons {
+      position: absolute;
+      bottom: 70px;
+      left: 25px;
+      width: 300px;
+      display: flex;
+      gap: 18px;
+      div {
+        aspect-ratio: 1/1;
+        width: 12px;
+        background-color: rgba($color: #787878, $alpha: 0.3);
+        border-radius: 50%;
+      }
+
+      .active {
+        background-color: var(--dark-cream);
+        position: relative;
+      }
+
+      .active::after {
+        content: "";
+        aspect-ratio: 1/1;
+        width: 30px;
+        position: absolute;
+        border: 1px solid var(--dark-cream);
+        border-radius: 50%;
+        top: -9px;
+        left: -9px;
+      }
+    }
+  }
+
+  @media (max-width: 1520px) {
+    .inspiration-slider {
+      display: none;
+    }
+
+    .inspiration-titles {
+      width: 70% !important;
+      padding-left: 5em;
+      padding-right: 5em;
+    }
+
+    .ins-items:nth-child(2) {
+      width: 30%;
+    }
+  }
+
+  @media (max-width: 830px) {
+    flex-direction: column;
+    .inspiration-titles {
+      width: 100% !important;
+      padding: 50px;
+      align-items: center;
+      text-align: center;
+      font-size: rem(14);
+    }
+
+    .inspiration-middle {
+      width: 100% !important;
+      height: 1000px;
+      background-position: center;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.nav-icons {
+  @media (max-width: 900px) {
+    display: none;
+  }
+  * {
+    margin: 0px 15px 0px 15px;
+    font-size: rem(25);
+  }
+}

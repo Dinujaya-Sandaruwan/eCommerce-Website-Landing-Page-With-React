@@ -1,0 +1,13 @@
+.footerMenu {
+  margin-top: 50px;
+  min-width: 200px;
+  .title {
+    color: var(--gray);
+  }
+
+  .item {
+    font-weight: $medium;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+}

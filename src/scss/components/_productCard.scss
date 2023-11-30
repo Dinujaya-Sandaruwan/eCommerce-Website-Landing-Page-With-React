@@ -1,0 +1,124 @@
+.product-card {
+  width: 300px;
+  background-color: var(--light-gray);
+
+  font-size: rem(16);
+
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  .discount,
+  .new {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    border-radius: 50%;
+    color: var(--white);
+    width: 50px;
+    font-size: 0.9em;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .discount {
+    background-color: var(--pink);
+  }
+  .new {
+    background-color: var(--blue);
+  }
+
+  .card-details {
+    padding: 15px;
+
+    * {
+      margin: 7px 0px 7px 0px;
+    }
+
+    h2 {
+      color: var(--light-black);
+      font-size: 1.5em;
+      font-weight: $semiBold;
+    }
+    p {
+      font-weight: $medium;
+      font-size: 1em;
+      color: var(--gray);
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+
+      h3 {
+        color: var(--light-black);
+        font-size: 1.2em;
+        font-weight: $semiBold;
+        margin-right: 15px;
+      }
+
+      p.original-price {
+        color: var(--gray);
+        opacity: 0.5;
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  .product-card-hover {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition-duration: 500ms;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 15px;
+      button {
+        color: var(--dark-cream);
+        padding: 15px;
+        width: 200px;
+        background-color: var(--white);
+        border: none;
+        font-size: 1em;
+        font-weight: $semiBold;
+        cursor: pointer;
+      }
+
+      .buttons {
+        display: flex;
+        span {
+          color: var(--white);
+          font-size: 1em;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          margin: 0px 10px 0px 10px;
+        }
+      }
+    }
+  }
+}
+
+.product-card:hover {
+  .product-card-hover {
+    display: flex;
+  }
+}
